@@ -1,10 +1,10 @@
 {
   "functions": {
-    "/*.py": {
+    "api/*.py": {
       "runtime": "python3.12"
     }
   },
   "routes": [
-    { "src": "/api/x_callback", "dest": "/x_callback.py" }
+    { "src": "/api/x_callback", "dest": "api/index.py" }
   ]
 }
