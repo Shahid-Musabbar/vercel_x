@@ -1,0 +1,13 @@
+[project]
+name = "my-flask-app"
+version = "0.1.0"
+description = "A simple Flask callback handler"
+authors = [
+    { name = "Shahid" }
+]
+
+requires-python = ">=3.10"
+
+dependencies = [
+    "Flask>=3.0.0"
+]
