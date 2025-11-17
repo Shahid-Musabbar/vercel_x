@@ -18,7 +18,13 @@ def x_callback():
     # Forward to your frontend (http)
     frontend_url = "http://localhost:8000/x/callback"
 
+    full_callback_url = request.url
+
     # Reattach code + state
-    redirect_url = f"{frontend_url}?code={urllib.parse.quote(code)}&state={urllib.parse.quote(state)}"
+    # redirect_url = f"{frontend_url}?code={urllib.parse.quote(code)}&state={urllib.parse.quote(state)}"
+
+    # Forward original vercel URL to fastapi
+    encoded = urllib.parse.quote(full_callback_url)
+    redirect_url = f"{frontend_url}?url={encoded}"
 
     return redirect(redirect_url)
