@@ -16,7 +16,7 @@ def x_callback():
         return "Invalid OAuth callback", 400
 
     # Forward to your frontend (http)
-    frontend_url = "http://localhost:8080/x/callback"
+    frontend_url = "http://localhost:8000/x/callback"
 
     # Reattach code + state
     redirect_url = f"{frontend_url}?code={urllib.parse.quote(code)}&state={urllib.parse.quote(state)}"
