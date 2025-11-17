@@ -19,6 +19,7 @@ def x_callback():
     frontend_url = "http://localhost:8000/x/callback"
 
     full_callback_url = request.url
+    print("Full Twitter callback URL:", full_callback_url)
 
     # Reattach code + state
     # redirect_url = f"{frontend_url}?code={urllib.parse.quote(code)}&state={urllib.parse.quote(state)}"
